@@ -1,7 +1,8 @@
 streamlit
-tensorflow
+tensorflow==2.13.0
 numpy
 pillow
 icrawler
 streamlit-drawable-canvas
+
 opencv-python-headless

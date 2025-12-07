@@ -7,8 +7,9 @@ import os
 
 
 # Loading trained model
-MODEL_PATH = "model/best_model.h5"
-CLASS_NAMES_PATH = "model/class_names.json" 
+MODEL_PATH = "https://drive.google.com/uc?export=download&id=1Gi8VusaxD7LtZuJxMuXUzXUnY4qH70M8"
+CLASS_NAMES_PATH = "https://drive.google.com/uc?export=download&id=13lIg55uwkMDChgG_gTrrpU-xmuOhntDs"
+
 
 model = tf.keras.models.load_model(MODEL_PATH)
 
@@ -53,4 +54,5 @@ if uploaded_file is not None:
     label, confidence = predict_image(image)
 
     st.success(f" Detected: **{label}** ({confidence:.2f}% confidence)")
+
 

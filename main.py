@@ -6,7 +6,7 @@ import json
 import os
 import urllib.request
 
-st.title("Object Detection App")
+st.title("Object Detection")
 
 # GitHub Release download URLs
 MODEL_URL = "https://github.com/aniket0727/object-detection-streamlit/releases/download/v1.0/model.h5"
@@ -18,15 +18,15 @@ CLASS_NAMES_PATH = "class_names.json"
 
 # Download model file if it doesn't exist
 if not os.path.exists(MODEL_PATH):
-    st.write("Downloading model... Please wait ⏳")
+    st.write("Downloading model... Please wait...")
     urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
-    st.write("Model downloaded successfully! ✅")
+    st.write("Model downloaded successfully...")
 
 # Download class names file if it doesn't exist
 if not os.path.exists(CLASS_NAMES_PATH):
-    st.write("Downloading class names... ⏳")
+    st.write("Downloading class names...")
     urllib.request.urlretrieve(CLASS_URL, CLASS_NAMES_PATH)
-    st.write("Class names downloaded successfully! ✅")
+    st.write("Class names downloaded successfully...")
 
 # Load model
 model = tf.keras.models.load_model(MODEL_PATH)
@@ -62,3 +62,4 @@ if uploaded_file:
     label, confidence = predict_image(image)
 
     st.success(f"Detected: **{label}** ({confidence:.2f}% confidence)")
+

@@ -9,7 +9,7 @@ import urllib.request
 st.title("Object Detection")
 
 # GitHub Release download URLs
-MODEL_URL = "https://github.com/aniket0727/object-detection-streamlit/releases/download/v1.0/model.h5"
+MODEL_URL = "https://github.com/aniket0727/object-detection-streamlit/releases/download/v1.0/best_model.h5"
 CLASS_URL = "https://github.com/aniket0727/object-detection-streamlit/releases/download/v1.0/class_names.json"
 
 # Local file paths
@@ -62,4 +62,5 @@ if uploaded_file:
     label, confidence = predict_image(image)
 
     st.success(f"Detected: **{label}** ({confidence:.2f}% confidence)")
+
 

@@ -1,8 +1,7 @@
 streamlit
-tensorflow==2.13.0
-numpy
-pillow
-icrawler
-streamlit-drawable-canvas
-
+tensorflow 
+numpy 
+pillow 
+icrawler 
+streamlit-drawable-canvas 
 opencv-python-headless

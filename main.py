@@ -13,7 +13,7 @@ MODEL_URL = "https://github.com/aniket0727/object-detection-streamlit/releases/d
 CLASS_URL = "https://github.com/aniket0727/object-detection-streamlit/releases/download/v1.0/class_names.json"
 
 # Local file paths
-MODEL_PATH = "best_model.h5"
+MODEL_PATH = "model.h5"
 CLASS_NAMES_PATH = "class_names.json"
 
 # Download model file if it doesn't exist
@@ -62,6 +62,7 @@ if uploaded_file:
     label, confidence = predict_image(image)
 
     st.success(f"Detected: **{label}** ({confidence:.2f}% confidence)")
+
 
 
 
